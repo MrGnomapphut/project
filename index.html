@@ -1,0 +1,43 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>สแกนบาร์โค้ดให้ Minmin</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <style>
+        body {
+            font-family: 'Kanit', sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background: linear-gradient(to right, #ffe6f0, #e0f7ff);
+        }
+        h1 {
+            margin-bottom: 20px;
+            color: #d63384;
+        }
+        #qrcode {
+            padding: 20px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.2);
+        }
+    </style>
+</head>
+<body>
+    <h1>สแกนเพื่อดูข้อความพิเศษ 💖</h1>
+    <div id="qrcode"></div>
+
+    <script>
+        const qr = new QRCode(document.getElementById("qrcode"), {
+            text: window.location.href.replace("index.html", "love.html"), // เปลี่ยนไปหน้า love.html
+            width: 200,
+            height: 200
+        });
+    </script>
+</body>
+</html>
